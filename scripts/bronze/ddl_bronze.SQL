@@ -10,6 +10,8 @@ Script Purpose:
 */
 IF OBJECT_ID ('bronze.crm_cust_info','U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
+GO
+
 CREATE TABLE bronze.crm_cust_info (
 	cst_id INT,
 	cst_key NVARCHAR(50),
@@ -19,9 +21,12 @@ CREATE TABLE bronze.crm_cust_info (
 	cst_gender NVARCHAR(50),
 	cst_create_date DATE
 );
+GO
 
 IF OBJECT_ID ('bronze.crm_prd_info','U') IS NOT NULL
 	DROP TABLE bronze.crm_prd_info;
+GO
+
 CREATE TABLE bronze.crm_prd_info (
 	prd_id INT,
 	prd_key NVARCHAR(50),
@@ -31,9 +36,12 @@ CREATE TABLE bronze.crm_prd_info (
 	prd_start_date DATE,
 	prd_end_date DATE,
 );
+GO
 
 IF OBJECT_ID ( 'bronze.sale_detail','U') IS NOT NULL
 	DROP TABLE  bronze.sale_detail;
+GO
+
 CREATE TABLE bronze.sale_detail (
 	sls_ord_num NVARCHAR(50),
 	sls_prd_key NVARCHAR(50),
@@ -45,28 +53,37 @@ CREATE TABLE bronze.sale_detail (
 	sls_quantity INT,
 	sls_price INT
 );
+GO
 
 IF OBJECT_ID ( 'bronze.erp_cust_az12','U') IS NOT NULL
 	DROP TABLE  bronze.erp_cust_az12;
+GO
+
 CREATE TABLE bronze.erp_cust_az12 (
 	CID NVARCHAR(50),
 	BDATE DATE,
 	GEN NVARCHAR(50)
 );
-
+GO
 IF OBJECT_ID ( 'bronze.erp_loc_a101','U') IS NOT NULL
 	DROP TABLE  bronze.erp_loc_a101;
+GO
+
 CREATE TABLE bronze.erp_loc_a101 (
 	CID NVARCHAR(50),
 	CNTRY NVARCHAR(50)
 );
+GO
 
 IF OBJECT_ID ( 'bronze.px_cat_g1v2','U') IS NOT NULL
 	DROP TABLE  bronze.px_cat_g1v2;
+GO
+
 CREATE TABLE bronze.px_cat_g1v2 (
 	ID NVARCHAR(50),
 	CAT NVARCHAR(50),
 	SUBCAT NVARCHAR(50),
 	MAINTAINANCE NVARCHAR(50)
 );
+GO
 
